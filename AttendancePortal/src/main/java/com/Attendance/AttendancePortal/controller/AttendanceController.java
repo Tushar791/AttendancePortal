@@ -22,7 +22,7 @@ public class AttendanceController {
 
 	@Autowired
 	private AttendanceService service;
-	
+
 	static String name;
 
 	@GetMapping("loadLogin")
@@ -33,17 +33,15 @@ public class AttendanceController {
 		mv.addObject("loginObj", new UserBean());
 		mv.addObject("message", " ");
 		mv.addObject("reportBean", new DailyReportBean());
-		
+
 		return mv;
 	}
 
 	@PostMapping("loginPage")
 	public ModelAndView insertdetails(@ModelAttribute("loginObj")UserBean bean,BindingResult result) {
-	
+
 		ModelAndView mv = new ModelAndView();
-	if(result.hasErrors()) {
-			mv.setViewName("loginPage");
-		}else {UserBean verify = service.findByEnterpriseId(bean);
+		UserBean verify = service.findByEnterpriseId(bean);
 		DailyReportBean reportBean = null;
 		if(verify!=null){
 			name = verify.getName();
@@ -60,14 +58,14 @@ public class AttendanceController {
 				System.out.println(reportBean);
 				System.out.println("out time reg");
 				mv.setViewName("inTime");
-				
+
 			}
-			
+
 		}else{
 			mv.setViewName("login");
 			mv.addObject("message", "Wrong Password\n Please try again!!");
-		}}
-		
+		}
+
 		return mv;
 	}
 	@PostMapping("addOutTimeAndActivity")
@@ -77,13 +75,13 @@ public class AttendanceController {
 		bean2.setOutTime(LocalDateTime.now());
 		bean2.setActivity(bean.getActivity());
 		service.saveOutTimeReport(bean2);
-		
+
 		mv.setViewName("outTime");
 		mv.addObject("message", "Hi, "+bean2.getName()+" ,your out time and activity has been registered");
 		return mv;
 	}
-	 
-	
+
+
 	@ExceptionHandler(value = Exception.class)
 	public ModelAndView handleAllException(Exception exception) {
 		ModelAndView mv = new ModelAndView();

@@ -1,8 +1,5 @@
 package com.Attendance.AttendancePortal.business.bean;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-
 public class UserBean {
 	
 	
