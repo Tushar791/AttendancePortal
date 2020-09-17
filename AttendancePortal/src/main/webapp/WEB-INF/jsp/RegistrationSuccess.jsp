@@ -1,25 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form"	uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration Success</title>
-<style>
-.error {
-	color: #ff0000;
-	font-style: italic;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<center>
-		<h2>User has been Added successfully</h2>
-			<br>
-			<br>
-			<h2>${message}</h2>
-			<br>
-			<br>
-			<br />
-			<a href="index.html"> Home</a>
-	</center>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="images/beenhere-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                </div>
+                <h1>Attendance Portal</h1>
+        </a>
+        </header>
+        <main>
+            <div class="success">
+            	<p>${message1}</p>
+            	<br>
+            	
+                <p>${message}</p>
+            </div>
+            </div>
+        </main>
+
+    </div>
 </body>
 </html>

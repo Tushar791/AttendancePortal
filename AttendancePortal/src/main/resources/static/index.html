@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Portal</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body >
-<div align= center>
-	
-			<br>
-			<br>
-			<a href="loadUser">Save User</a>
-			<br>
-			<a href="loadLogin"> Mark Attendance</a>
-			<br>
-			<a href="genrateReport">Report</a>
-</div>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="images/beenhere-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                </div>
+                <h1>Attendance Portal</h1>
+        </a>
+        </header>
+        <main>
+            <div class="box1">
+                <a href="loadUser">
+                    <img src="images/add_box-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                    <h2>Add User</h2>
+                    <p>Admin will be able to add ASEs eligible for marking attendance</p>
+                </a>    
+            </div>
+       
+            <div class="box2">
+                <a href="loadLogin">
+                    <img src="images/where_to_vote-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                    <h2>Mark Attendance</h2>
+                    <p>ASEs can mark attendance</p>
+                </a>
+            </div>
+                
+            <div class="box3">
+                <a href="genrateReport">
+                    <img src="images/table_chart-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                    <h2>Report</h2>
+                    <p>
+                        Admin can see the report generated for the day
+                    </p>
+                </a>
+            </div>
+        </main>
 
+    </div>
 </body>
 </html>

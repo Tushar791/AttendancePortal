@@ -56,8 +56,8 @@ public class AttendanceController {
 			}else if(service.verifyToRegisterOutTime(service.findByDailyReportName(verify.getName()))) {
 				reportBean = service.findByDailyReportName(verify.getName());
 				System.out.println(reportBean);
-				System.out.println("out time reg");
 				mv.setViewName("inTime");
+				mv.addObject("reportBean", reportBean);
 
 			}
 
@@ -72,6 +72,7 @@ public class AttendanceController {
 	public ModelAndView registerOutTime(@ModelAttribute("reportBean")DailyReportBean bean) {
 		ModelAndView mv = new ModelAndView();
 		DailyReportBean bean2= service.findByDailyReportNameAndDate(name,LocalDate.now());
+		System.out.println(bean2);
 		bean2.setOutTime(LocalDateTime.now());
 		bean2.setActivity(bean.getActivity());
 		service.saveOutTimeReport(bean2);

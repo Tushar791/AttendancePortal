@@ -30,6 +30,7 @@ public class SaveUserController {
 		service.saveLogin(bean);
 		service.saveDailReportName(bean.getName());
 		mv.setViewName("RegistrationSuccess");
+		mv.addObject("message1", "User has been successfully added");
 		mv.addObject("message", "Name :"+bean.getName()+"\nEnterpriseId :"+bean.getEnterpriseId()
 						+"\nEmployeeID :"+bean.getEmployeeId());
 		

@@ -3,50 +3,54 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration Page</title>
-<style>
-.error {
-	color: #ff0000;
-	font-style: italic;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-	<center>
-		<h2>Add User Details</h2>
-		
-		<form:form modelAttribute="userObj" method="POST"
+	<form:form modelAttribute="userObj" method="POST"
 			action="saveUser">
+    <div class="container">
+        <header>
+            <a href="">
+                <div class="logo">
+                    <img src="images/beenhere-24px.svg" alt="" style="height: 5rem;width: 5rem">
+                </div>
+                <h1>Attendance Portal</h1>
+        </a>
+        </header>
+        <main>
+           <div class="entryTable">
+               <table class="w3-table-all w3-card-4">
+                   <tbody>
+                       <tr>
+                           <td>Name </td>
+                           <td><form:input path="name" /></td>
+                       </tr>
+                       <tr>
+                           <td>EnterpriseId </td>
+                           <td><form:input path="enterpriseId" /></td>
+                       </tr>
+                       <tr>
+                           <td>EmployeeId </td>
+                           <td><form:input path="employeeId" /></td>
+                       </tr>
+                   </tbody>
+               </table>
+               <br>
+               <input type="submit" class="button1" value="Submit">
+           </div>
+        </main>
 
-			<br>
-
-			<table border="2">
-				<tr>
-					<th>Name</th>
-					<td><form:input path="name" /></td>
-				</tr>
-				<tr>
-					<th>EnterpriseID</th>
-					<td><form:input path="enterpriseId" /></td>
-				</tr>
-				<tr>
-					<th>EmployeeID</th>
-					<td><form:input path="employeeId" /></td>	
-				</tr>
-			</table>
-			<br />
-			<input type="submit" value="save" />
-			<br />
-			<br />
-			<a href="index.html"> Home</a>
-	   	
-		</form:form>
-		
-		<form:errors path="userObj"></form:errors>
-	</center>
+    </div>
+    </form:form>
+    
 </body>
 </html>

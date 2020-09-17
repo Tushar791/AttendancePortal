@@ -1,0 +1,172 @@
+html{
+    height: 100%;
+
+}
+
+body{
+    background-image: url(images/background-img.png);
+    
+}
+.container{
+    width: 1024px;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    background-color: rgba(10, 201, 214, 0.9);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    border: solid;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+
+}
+.logo{
+    margin-left: auto; 
+   
+
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: mintcream;
+    font-size: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: mintcream;
+    font-size: 2rem;
+    
+    
+}
+main {
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.box1{
+    background-color: rgb(255, 0, 0,0.9);
+    min-height: 250px;
+    width: 30%;
+    align-items: center;
+    border-style: solid ;
+    border-width: 3px;
+    padding: 4px 4px;
+    display: inline-block;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    
+}
+.box2{
+    background-color: rgb(244, 161, 6,0.9);
+    min-height: 250px;
+    width: 30%;
+    align-items: center;
+    border-style: solid ;
+    border-width: 3px;
+    padding: 4px 4px;
+    display: inline-block;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+
+}
+.box3{
+    background-color: rgb(247, 94, 67,0.9);
+    min-height: 250px;
+    width: 30%;
+    align-items: center;
+    border-style: solid ;
+    border-width: 3px;
+    padding: 4px 4px;
+    display: inline-block;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+.login{
+    font-family: 'Times New Roman', Times, serif;
+  outline: 0;
+  background: rgb(255, 0, 0,0.9);;
+  width: 50%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 3rem;
+  flex: 1;
+  transition-duration: 0.4s;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 8px;
+
+}
+.button1{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: greenyellow;
+    font-size: 1.25rem;
+    border-style: none;
+    padding: 5px 15px;
+    border-radius: 5px ;
+    transition-duration: 0.4s;
+}
+
+.login:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+.button1:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+.box1:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+.box2:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+.box3:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+header:hover{
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.932);
+}
+a{
+    text-decoration: none;
+}
+.success{
+    background-color: rgb(173, 255, 47,0.9);
+    flex: 1;
+    min-height: 75px;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+    border: solid;
+    border-width: 3px;
+}
+p{
+    color: mintcream;
+    text-decoration: none;
+    
+}
+.entryTable{
+    background-color: rgba(241, 255, 47, 0.9);
+    flex:1;
+    padding: 2rem 2rem;
+    border: solid;
+    border-radius: 8px;
+    border-width: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+.error {
+	color: #ff0000;
+	font-style: italic;
+}
+
+
+

@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -9,11 +8,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
+    <title>Login</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <header>
             <a href="index.html">
@@ -23,12 +23,23 @@
                 <h1>Attendance Portal</h1>
         </a>
         </header>
+        <form:form action="userAdmin" modelAttribute="adminObj" method="POST">
         <main>
-            <div class="success">
-                <p>${message}</p>
+        
+            <div class="login">
+                <p> Login </p>
+                <p class="error">${message }</p>
+                
+                <form:input path="enterpriseId" placeholder="Username"/>
+                <br>
+                <form:password path="employeeId" placeholder="password"/>
+                <br>
+                <input type="submit" value="Login" class="button1"/>
+                
             </div>
-            </div>
+            
         </main>
+        </form:form>
 
     </div>
 </body>
