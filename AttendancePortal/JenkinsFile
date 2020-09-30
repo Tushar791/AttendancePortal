@@ -8,7 +8,7 @@ node{
     }
     input 'do you want to archive'
     stage 'archive jar file'
-    archiveArtifacts artifacts: '\\AttendancePortal\\target\\*.jar',
+    archiveArtifacts artifacts: '\\AttendancePortal\\target\\*.war',
             followSymlinks: false, onlyIfSuccessful: true
     
 }
