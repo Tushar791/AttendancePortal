@@ -10,5 +10,8 @@ node{
     stage 'archive jar file'
     archiveArtifacts artifacts: '\\AttendancePortal\\target\\*.war',
             followSymlinks: false, onlyIfSuccessful: true
+
+    stage 'deploy'
+    deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:2000/')], contextPath: null, war: '**/*.war'
     
 }
