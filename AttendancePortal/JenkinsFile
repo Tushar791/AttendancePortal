@@ -1,4 +1,8 @@
 node{
+
+    stage 'clean workspace'
+    cleanWs()
+    
     stage 'pulling from git'
     git 'https://github.com/Tushar791/AttendancePortal.git'
     
