@@ -11,7 +11,7 @@ public class DailyReportBean {
 		return "DailyReportBean [slNo=" + slNo + ", name=" + name + ", inTime=" + inTime + ", outTime=" + outTime
 				+ ", date=" + date + ", activity=" + activity + "]";
 	}
-	private Integer slNo;
+	private Integer slvNo;
 	private String name;
 	private LocalDateTime inTime;
 	private LocalDateTime outTime;
