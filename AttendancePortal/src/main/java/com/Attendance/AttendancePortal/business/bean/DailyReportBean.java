@@ -8,7 +8,7 @@ public class DailyReportBean {
 	
 	@Override
 	public String toString() {
-		return "DailyReportBean [slNo=" + slNo + ", name=" + name + ", inTime=" + inTime + ", outTime=" + outTime
+		return "DailyRe portBean [slNo=" + slNo + ", name=" + name + ", inTime=" + inTime + ", outTime=" + outTime
 				+ ", date=" + date + ", activity=" + activity + "]";
 	}
 	private Integer slNo;
